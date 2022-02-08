@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Open+Sans:300,400,700" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/tema-padrao.css">
     <link rel="stylesheet" href="assets/css/secaoDestaque.css">
@@ -24,6 +24,8 @@
 </head>
 
 <body>
+
+    <a href="#conteudo-principal" class="pularNavegacao">Pular para o conteúdo principal</a>
 
     <header class="cabecalho container">
         <a href="#" class="cabecalho-logo" title="Logo Apeperia">
@@ -65,11 +67,11 @@
             </ul>
         </nav>
     </header>
-
-    <main class="conteudo">
+    <!-- o atributo "role" para alguns navegadores referencia semanticamente para leitores de tela que essa seção faz parte do "main" conteúdo principal -->
+    <main class="conteudo" role="main">
 
         <section class="secaoDestaque">
-            <h1 class="secaoDestaque-titulo">APLICATIVOS NA MEDIDA</h1>
+            <h1 class="secaoDestaque-titulo" id="conteudo-principal">APLICATIVOS NA MEDIDA</h1>
             <p class="secaoDestaque-texto">
                 A Apeperia é uma startup com um jeito inovador de comprar e montar aplicativos mobile e web para
                 pequenas e médias empresas
@@ -212,7 +214,8 @@
 
                 <li id="new0" class="listaDeArtigos-item">
                     <article class="listaDeArtigos-artigo">
-                        <img src="assets/images/10-aplicativos-mais-baixados.png" class="listaDeArtigos-artigo-img" alt="10 aplicativos mais badalados do momento">
+                        <img src="assets/images/10-aplicativos-mais-baixados.png" class="listaDeArtigos-artigo-img"
+                            alt="10 aplicativos mais badalados do momento">
                         <h3 class="listaDeArtigos-artigo-titulo">
                             Conheça os 10 aplicativos mais badalados do momento
                         </h3>
@@ -229,7 +232,8 @@
 
                 <li id="new1" class="listaDeArtigos-item">
                     <article class="listaDeArtigos-artigo">
-                        <img src="assets/images/ux-usabilidade.jpg" class="listaDeArtigos-artigo-img" alt="Os benefícios de treinar sua equipe em UX">
+                        <img src="assets/images/ux-usabilidade.jpg" class="listaDeArtigos-artigo-img"
+                            alt="Os benefícios de treinar sua equipe em UX">
                         <h3 class="listaDeArtigos-artigo-titulo">
                             Usabilidade: Entenda os benefícios de treinar sua equipe em UX
                         </h3>
@@ -246,7 +250,8 @@
 
                 <li id="new2" class="listaDeArtigos-item">
                     <article class="listaDeArtigos-artigo">
-                        <img src="assets/images/dicas-acessibilidade.jpg" class="listaDeArtigos-artigo-img" alt="Dicas para melhorar a acessibilidade em sua interface">
+                        <img src="assets/images/dicas-acessibilidade.jpg" class="listaDeArtigos-artigo-img"
+                            alt="Dicas para melhorar a acessibilidade em sua interface">
                         <h3 class="listaDeArtigos-artigo-titulo">
                             5 dicas para melhorar a acessibilidade em sua interface
                         </h3>
@@ -291,24 +296,28 @@
             <div class="container">
                 <h2 class="secaoDestaques-titulo tituloPadrao">DESTAQUES</h2>
 
+                <!-- "aria-labelledby" permite fazer a referência do id tituloDestaque1 para o leitor de tela saber que a imagem e o conteúdo faz parte da tag "a" -->
                 <a href="http://blog.apeperia.com.br/design/conheca-primeiras-etapas-criacao-logotipo-teste-teste"
-                    class="secaoDestaques-link">
-                    <div class="secaoDestaques-destaque">
-                        <img src="assets/images/comecando-criar-logotipo.png" class="secaoDestaques-destaque-img" alt="Ilustração de ferramentas do design">
-                        <p class="secaoDestaques-destaque-titulo" id="tituloDestaque1">
+                    class="secaoDestaques-link" aria-labelledby="tituloDestaque1">
+                    <figure class="secaoDestaques-destaque">
+                        <img src="assets/images/comecando-criar-logotipo.png" class="secaoDestaques-destaque-img"
+                            alt="Ilustração de ferramentas do design">
+                        <figcaption class="secaoDestaques-destaque-titulo" id="tituloDestaque1">
                             Conheça as primeiras etapas na criação de um logotipo
-                        </p>
-                    </div>
+                        </figcaption>
+                    </figure>
                 </a>
 
+                <!-- "aria-labelledby" permite fazer a referência do id tituloDestaque1 para o leitor de tela saber que a imagem e o conteúdo faz parte da tag "a" -->
                 <a href="http://blog.apeperia.com.br/design/dicas-como-fotografar-com-celular"
-                    class="secaoDestaques-link">
-                    <div class="secaoDestaques-destaque">
-                        <img src="assets/images/dicas-fotografia.png" class="secaoDestaques-destaque-img" alt="Moça mostrando foto da câmera para o rapaz">
-                        <p class="secaoDestaques-destaque-titulo" id="tituloDestaque2">
+                    class="secaoDestaques-link" aria-labelledby="tituloDestaque2">
+                    <figure class="secaoDestaques-destaque">
+                        <img src="assets/images/dicas-fotografia.png" class="secaoDestaques-destaque-img"
+                            alt="Moça mostrando foto da câmera para o rapaz">
+                        <figcaption class="secaoDestaques-destaque-titulo" id="tituloDestaque2">
                             Veja dicas de como fotografar usando seu celular
-                        </p>
-                    </div>
+                        </figcaption>
+                    </figure>
                 </a>
 
                 <button class="secaoDestaques-form-botao btnPadrao btnPadrao--pequeno" id="abreDialog">
@@ -357,57 +366,61 @@
                     </p>
 
                     <div class="contatoCampo contatoCampo--sucesso">
-                        <label>Nome: </label>
-                        <input type="text" class="contatoCampo--validouFoi" value="Natan Souza" required>
+                        <label for="nome">Nome: </label>
+                        <input id="nome" name="nome" type="text" class="contatoCampo--validouFoi" placeholder="Digite seu nome..." required>
                     </div>
 
                     <div class="contatoCampo contatoCampo--erro">
-                        <label>Email: </label>
-                        <input type="email" class="contatoCampo--validouErro" required>
+                        <label for="email_input">Email: </label>
+                        <input id="email_input" name="email_input" type="email" placeholder="Seu email aqui..." class="contatoCampo--validouErro"
+                            required>
                         <span class="contatoCampo-msg contatoCampo-msg--erro">
                             Você quis dizer <a href="#">gmail.com?</a>
                         </span>
                     </div>
 
                     <div class="contatoCampo contatoCampo--erro">
-                        <label>Telefone: </label>
-                        <input type="text" class="contatoCampo--validouErro" placeholder="(11) 5571-2751">
+                        <label for="tel">Telefone: </label>
+                        <input id="tel" name="tel" type="text" class="contatoCampo--validouErro"
+                            placeholder="(11) 5571-2751">
                         <span class="contatoCampo-msg contatoCampo-msg--erro">Faltou o DDD</span>
                     </div>
 
                     <div class="contatoCampo">
-                        <label>CEP: </label>
-                        <input type="text" maxlength="8" placeholder="Exemplo: 04101-300" required>
+                        <label for="cep">CEP: </label>
+                        <input id="cep" name="cep" type="text" maxlength="8" placeholder="Exemplo: 04101-300" required>
                     </div>
 
                     <div class="contatoCampo">
                         <label>Endereço: </label>
-                        <input type="text" class="contatoCampo-campoDesabilitado" disabled value="Rua Vergueiro">
+                        <!-- o atributo "readonly" permite o usuário de leitor de tela conferir se os valores estão corretos, mas não permite alterar para uma consulta de endereço pelo CEP  -->
+                        <input type="text" class="contatoCampo-campoDesabilitado" readonly value="Rua Vergueiro">
                     </div>
 
                     <div class="contatoCampo">
                         <label>Bairro: </label>
-                        <input type="text" class="contatoCampo-campoDesabilitado" disabled value="Vila Mariana">
+                        <input type="text" class="contatoCampo-campoDesabilitado" readonly value="Vila Mariana">
                     </div>
 
                     <div class="contatoCampo">
                         <label>Cidade: </label>
-                        <input type="text" class="contatoCampo-campoDesabilitado" disabled value="São Paulo">
+                        <input type="text" class="contatoCampo-campoDesabilitado" readonly value="São Paulo">
                     </div>
 
                     <div class="contatoCampo">
                         <label>Estado: </label>
-                        <input type="text" class="contatoCampo-campoDesabilitado" disabled value="SP">
+                        <input type="text" class="contatoCampo-campoDesabilitado" readonly value="SP">
                     </div>
 
                     <div class="contatoCampo">
-                        <label>Mensagem: </label>
-                        <textarea name="" cols="30" rows="10" required></textarea>
+                        <label for="msg_textarea">Mensagem: </label>
+                        <textarea id="msg_textarea" name="msg_textarea" cols="30" rows="10" required></textarea>
                     </div>
 
                     <div class="contatoCampo">
-                        <input type="checkbox" checked value="receberDestaques" class="contatoCampo-checkbox">
-                        <label class="contatoCampo-label">Receber destaques por email</label>
+                        <input id="receber-email" name="receber-email" type="checkbox" checked value="receberDestaques"
+                            class="contatoCampo-checkbox">
+                        <label for="receber-email" class="contatoCampo-label">Receber destaques por email</label>
                     </div>
 
                     <div class="contatoCampo">
@@ -445,7 +458,8 @@
                     </p>
                 </div>
 
-                <video src="assets/images/formacao-java.mp4" class="secaoInstitucional-video">
+                <video src="assets/images/formacao-java.mp4" class="secaoInstitucional-video" controls>
+                    <track src="assets/images/legenda-portugues-brasil.vtt" kind="subtitles" srclang="pt-br" label="PT-Brasil">
                 </video>
 
             </div>

@@ -36,3 +36,10 @@
   color: #fff;
   background-color: #B72E2E;
 }
+
+
+#receber-email {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
