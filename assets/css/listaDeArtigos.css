@@ -20,15 +20,13 @@
 }
 
 
-.listaDeArtigos-item:not(:target):first-child{
+/* .listaDeArtigos-item:not(:target):first-child{
   display: inline-block;
 }
 
 .listaDeArtigos-item:target {
   display: inline-block;
-}
-
-
+} */
 
 
 .listaDeArtigos-artigo-img {
@@ -84,6 +82,7 @@
 }
 
 .listaDeArtigos-slider-item--ativo {
-  background: hsla(200, 70%, 0%, .6);
+  background: rgba(0, 0, 0, 0.6);
+  border: 3px solid rgba(0, 0, 0, 0.4);
 }
 

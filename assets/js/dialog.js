@@ -22,8 +22,8 @@ function fechandoDialog() {
   // conteudoForaDiaLog.inert = false
   conteudoForaDialog.removeAttribute("inert")
   document.querySelector('.conteudo-dialog').classList.remove("blur-modal")
-  document.addEventListener('keyup', function(evento) {
-    if(evento.keyCode == 27) {
+  document.addEventListener('keyup', function(event) {
+    if(event.keyCode == 27) {
       fechandoDialog()
     }
   })
